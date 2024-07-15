@@ -5,12 +5,14 @@ import base_url from "./../api/bootapi";
 import { toast } from "react-toastify";
 const AddCourse=()=>{
     useEffect(() => {
-        document.title = "Add course"
+        document.title = "Add course";
+        
     }, []);
 
     const [course, setCourse] = useState({});
 
     const handleForm = (e) => {
+        postDatatoServer(course);
         console.log(course);
         e.preventDefault();
     };
